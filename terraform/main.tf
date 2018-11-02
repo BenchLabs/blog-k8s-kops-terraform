@@ -14,7 +14,6 @@ locals {
   azs                    = ["eu-west-2a", "eu-west-2b", "eu-west-2c"]
   environment            = "dev"
   kops_state_bucket_name = "${local.environment}-kops-state"
-
   // Needs to be a FQDN
   kubernetes_cluster_name = "k8s-dev0.domain.com"
   ingress_ips             = ["10.0.0.100/32", "10.0.0.101/32"]
