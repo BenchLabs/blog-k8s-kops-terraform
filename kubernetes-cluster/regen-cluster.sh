@@ -11,5 +11,3 @@ kops toolbox template --name ${CLUSTER_NAME} --values <( echo ${TF_OUTPUT}) --te
 kops replace -f cluster.yaml --state ${STATE} --name ${CLUSTER_NAME} --force
 
 kops update cluster --target terraform --state ${STATE} --name ${CLUSTER_NAME} --out .
-
-kops rolling-update cluster --node-interval 2m --instance-group nodes --force --yes --state ${STATE} --name ${CLUSTER_NAME}
