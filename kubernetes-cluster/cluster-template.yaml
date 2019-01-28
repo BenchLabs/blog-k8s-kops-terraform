@@ -45,7 +45,7 @@ spec:
     zone: {{index $.availability_zones.value $i}}
   {{end}}
   # Private subnets, one per AZ
-  {{range $i, $id := .public_subnet_ids.value}}
+  {{range $i, $id := .private_subnet_ids.value}}
   - id: {{.}}
     name: {{index $.availability_zones.value $i}}
     type: Private
